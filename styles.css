@@ -186,3 +186,14 @@ footer p, footer > a:last-child { margin: 0; color: rgba(255,255,255,.62); font-
 .wa-lista a:hover { border-color: var(--forest); background: var(--cream); }
 .wa-lista strong { display: block; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 19px; }
 .wa-lista span { display: block; margin-top: 4px; color: var(--sage); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
+
+/* O hover do .button escurece o fundo, mas o .button-outline mantinha o
+   texto verde-escuro: dava 1,2:1 de contraste, ou seja, sumia. Vem assim
+   do original. O texto passa a clarear junto com o fundo. */
+.button-outline:hover { background: var(--forest); color: var(--white); }
+
+/* O "Fale conosco!" é <button>, não <a>: <button> não herda a fonte do
+   body sozinho, então ficava em fonte de sistema ao lado dos irmãos. */
+button.button { font-family: inherit; border-width: 0; cursor: pointer; }
+button.button.button-outline { border-width: 1px; border-style: solid; }
+.wa-icone { width: 17px; height: 17px; margin-right: 10px; flex: none; }

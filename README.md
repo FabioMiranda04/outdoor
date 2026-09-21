@@ -17,13 +17,20 @@ no nosso domínio sem motivo.
 
 HTML, CSS, textos e imagens são os originais, byte por byte.
 
-## O botão do WhatsApp
+## O botão "Fale conosco!"
+
+Leva a logo do WhatsApp em SVG inline — sem arquivo de imagem, sem
+biblioteca, e a cor sai do CSS, então ele acompanha o estado do botão.
 
 Abre um pop-up com as três idealizadoras em ordem alfabética. Escolhida
 uma, o WhatsApp abre já com a mensagem escrita:
 
 > Olá, tudo bem? Vi o anúncio da Tríade Conecta e gostaria de saber mais
 > sobre a comunidade e os próximos encontros.
+
+**Bug corrigido de passagem:** no original, passar o mouse escurecia o
+fundo do botão mas deixava o texto verde-escuro — 1,2:1 de contraste, ou
+seja, o texto sumia. Agora clareia junto: 12,2:1.
 
 É o `<dialog>` nativo do HTML — Esc fecha, o fundo escurece e a página
 atrás trava sem nenhuma biblioteca. O script inteiro tem cinco linhas.
