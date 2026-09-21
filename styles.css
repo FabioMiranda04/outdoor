@@ -172,3 +172,17 @@ footer p, footer > a:last-child { margin: 0; color: rgba(255,255,255,.62); font-
   html { scroll-behavior: auto; }
   * { transition: none!important; }
 }
+
+/* Pop-up do WhatsApp -------------------------------------------------- */
+.wa { width: min(420px, calc(100vw - 32px)); padding: 40px 32px 32px; border: none; background: var(--paper); color: var(--ink); text-align: center; }
+.wa::backdrop { background: rgba(23, 25, 21, .55); }
+.wa h3 { margin: 0 0 12px; font-size: 26px; }
+.wa .eyebrow { margin-bottom: 14px; }
+.wa-intro { margin: 0 0 28px; color: #646861; font-size: 15px; line-height: 1.6; }
+.wa-fechar { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border: none; background: none; color: var(--sage); font-size: 26px; line-height: 1; cursor: pointer; }
+.wa-fechar:hover { color: var(--ink); }
+.wa-lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; text-align: left; }
+.wa-lista a { display: block; padding: 16px 18px; border: 1px solid var(--line); transition: border-color .2s, background .2s; }
+.wa-lista a:hover { border-color: var(--forest); background: var(--cream); }
+.wa-lista strong { display: block; font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 19px; }
+.wa-lista span { display: block; margin-top: 4px; color: var(--sage); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }

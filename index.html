@@ -146,10 +146,36 @@
       <p>Escolha como você deseja se conectar com a Tríade.</p>
       <div class="contact-actions">
         <a class="button" href="https://www.instagram.com/triade.conecta/" target="_blank" rel="noopener">Instagram @triade.conecta</a>
-        <a class="button button-outline" href="#">Falar no WhatsApp</a>
+        <button class="button button-outline" type="button" data-wa>Falar no WhatsApp</button>
       </div>
-      <small>Para a versão final, inserir aqui o número comercial da Tríade.</small>
     </section>
+
+    <dialog class="wa" id="wa">
+      <form method="dialog"><button class="wa-fechar" aria-label="Fechar">&times;</button></form>
+      <p class="eyebrow">Falar no WhatsApp</p>
+      <h3>Com qual de nós?</h3>
+      <p class="wa-intro">A conversa já começa com uma mensagem pronta — é só enviar.</p>
+      <ul class="wa-lista">
+          <li>
+            <a href="https://wa.me/5562981651103?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vi%20o%20an%C3%BAncio%20da%20Tr%C3%ADade%20Conecta%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20comunidade%20e%20os%20pr%C3%B3ximos%20encontros." target="_blank" rel="noopener">
+              <strong>Cris Miranda</strong>
+              <span>Maturidade · Relacionamento · Visão</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/556281317399?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vi%20o%20an%C3%BAncio%20da%20Tr%C3%ADade%20Conecta%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20comunidade%20e%20os%20pr%C3%B3ximos%20encontros." target="_blank" rel="noopener">
+              <strong>Lia Chaves</strong>
+              <span>Comunicação · Conexão · Experiência</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/556282870136?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Vi%20o%20an%C3%BAncio%20da%20Tr%C3%ADade%20Conecta%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20comunidade%20e%20os%20pr%C3%B3ximos%20encontros." target="_blank" rel="noopener">
+              <strong>Lívia Duarte</strong>
+              <span>Estratégia · Liderança · Execução</span>
+            </a>
+          </li>
+      </ul>
+    </dialog>
   </main>
 
   <footer>
@@ -157,5 +183,12 @@
     <p>Conexão • Desenvolvimento • Negócios</p>
     <a href="https://www.instagram.com/triade.conecta/" target="_blank" rel="noopener">@triade.conecta</a>
   </footer>
+  <script>
+    var wa = document.getElementById('wa');
+    document.querySelectorAll('[data-wa]').forEach(function (b) {
+      b.addEventListener('click', function () { wa.showModal(); });
+    });
+    wa.addEventListener('click', function (e) { if (e.target === wa) wa.close(); });
+  </script>
 </body>
 </html>

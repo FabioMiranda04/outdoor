@@ -17,10 +17,25 @@ no nosso domínio sem motivo.
 
 HTML, CSS, textos e imagens são os originais, byte por byte.
 
+## O botão do WhatsApp
+
+Abre um pop-up com as três idealizadoras em ordem alfabética. Escolhida
+uma, o WhatsApp abre já com a mensagem escrita:
+
+> Olá, tudo bem? Vi o anúncio da Tríade Conecta e gostaria de saber mais
+> sobre a comunidade e os próximos encontros.
+
+É o `<dialog>` nativo do HTML — Esc fecha, o fundo escurece e a página
+atrás trava sem nenhuma biblioteca. O script inteiro tem cinco linhas.
+
 ## Pendências
 
-- [ ] **Botão do WhatsApp em `href="#"`.** A própria página avisa, num
-      `<small>` na seção de contato: falta o número comercial;
+- [ ] **Confirmar os números das sócias.** Lia e Lívia estão com 8
+      dígitos (`8131-7399`, `8287-0136`) e Cris com 9 (`98165-1103`).
+      Celular no Brasil tem 9 desde 2016, então ou falta o 9 nos dois
+      primeiros, ou são cadastros antigos que o WhatsApp manteve. Os
+      links estão exatamente como você passou — **toque nos três antes
+      de imprimir**. Corrigir é mudar o número no `index.html`;
 - [ ] **Imagens pesam 3,7 MB.** As fotos vêm em 2240×3360 — resolução de
       câmera, não de web — e a logo é um PNG de 921 KB. Num celular em
       4G isso demora. Redimensionar para 1400px no lado maior derruba o

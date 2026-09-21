@@ -6,8 +6,9 @@ em maiúsculas responde 200.
 
 | Arquivo | Para quê |
 |---|---|
-| `qr-outdoor.svg` | **o mestre para impressão.** Vetor: escala para qualquer tamanho sem perder nitidez |
-| `qr-outdoor.png` | 2960px, para conferir na tela e mandar por WhatsApp |
+| `qr-outdoor.pdf` | **é este que vai para a gráfica.** Vetor, formato que impressora entende |
+| `qr-outdoor.svg` / `.eps` | o mesmo vetor, para quem preferir abrir no Illustrator ou no Corel |
+| `qr-outdoor.png` | 8880px, para conferir na tela e mandar por WhatsApp |
 | `qr-outdoor-marca.*` | mesmo código nas cores da marca — Walnut sobre Cream Quartz, contraste 12,4:1 |
 | `qr-outdoor-longe.*` | 25×25 em vez de 29×29. Módulos maiores, lê de mais longe, menos tolerante a sujeira |
 
@@ -32,8 +33,22 @@ código sem ela. Não recorte, não encoste texto.
       de novo;
 - [ ] **Testar impresso, não na tela.** Imprima em papel no tamanho final
       e escaneie de longe, com celular de câmera ruim e pouca luz;
-- [ ] **Tamanho:** a regra prática é lado do QR ≥ distância de leitura
-      dividida por 10. Quem lê a 3m precisa de 30cm de QR.
+- [ ] **Tamanho, para outdoor de avenida.** A regra é: lado do QR ≥
+      distância de leitura ÷ 10. Com os 37 módulos de borda a borda deste
+      código:
+
+      | QR de | cada módulo | lê a até |
+      |---|---|---|
+      | 80 cm | 22 mm | ~8 m |
+      | 120 cm | 32 mm | ~12 m |
+      | 200 cm | 54 mm | ~20 m |
+
+      Num outdoor de 9×3m, 120cm cabe folgado na altura e alcança os ~12m
+      de quem está parado no semáforo ou na calçada. **Quem passa de
+      carro a 60 km/h não escaneia nada** — não existe tamanho que
+      resolva isso, porque falta tempo, não pixel. Por isso o telefone e
+      o @ precisam estar legíveis no painel também, para quem não vai
+      parar.
 
 ## Regerar
 

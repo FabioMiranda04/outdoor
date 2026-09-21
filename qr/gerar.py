@@ -20,6 +20,6 @@ for nome, ecc, dark, light in (
     ("qr-outdoor-longe", "M", "black", "white"),
 ):
     q = segno.make(payload, error=ecc)
-    q.save(f"qr/{nome}.svg", scale=10, border=4, dark=dark, light=light)
-    q.save(f"qr/{nome}.png", scale=80, border=4, dark=dark, light=light)
+    for ext, escala in (("svg", 10), ("pdf", 10), ("eps", 10), ("png", 240)):
+        q.save(f"qr/{nome}.{ext}", scale=escala, border=4, dark=dark, light=light)
     print(f"{nome}: versao {q.version}, {q.symbol_size(border=0)[0]} modulos, ecc {ecc}")
